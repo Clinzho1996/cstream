@@ -61,6 +61,10 @@ const Login = ({navigation}) => {
     auth()
       .signInWithEmailAndPassword(email, password)
       .then(() => {
+        setIsLoading(true);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 3000);
         console.log('User account created & signed in!');
         navigation.navigate('Loading');
       })
@@ -87,6 +91,8 @@ const Login = ({navigation}) => {
         navigation.navigate('Loading');
       });
   }
+
+  const [isLoading, setIsLoading] = useState(false);
 
   return (
     <View
@@ -219,8 +225,17 @@ const Login = ({navigation}) => {
           </TouchableOpacity>
         </View>
         <View style={{paddingHorizontal: 20}}>
-          <TouchableOpacity style={styles.btn} onPress={Login}>
-            <Text style={styles.btnText}>Login</Text>
+          <TouchableOpacity
+            style={isLoading ? styles.buttonLoading : styles.btn}
+            onPress={Login}
+            disabled={isLoading}>
+            {isLoading ? (
+              <ActivityIndicator size="small" color="#ffffff" />
+            ) : (
+              <Text style={styles.btnText}>
+                {isLoading ? 'Loading' : 'Login'}
+              </Text>
+            )}
           </TouchableOpacity>
         </View>
         <View style={{marginTop: 40, alignItems: 'center'}}>
