@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "34974335132",
+    "project_id": "cstream-68271",
+    "storage_bucket": "cstream-68271.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34974335132:android:26943655a8318bdeaf2d59",
+        "android_client_info": {
+          "package_name": "com.cstream"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34974335132-q2gbengq5e0a5m90s7n3h3b36uijogbl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlzIfVrPfl5Si3HLuZFLclyY-kI1d5-XY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34974335132-q2gbengq5e0a5m90s7n3h3b36uijogbl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
